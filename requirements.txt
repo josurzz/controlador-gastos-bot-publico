@@ -1,0 +1,12 @@
+python-telegram-bot==21.6
+faster-whisper==1.0.3
+gspread==6.1.4
+google-auth==2.35.0
+python-dotenv==1.0.1
+
+# Solo hace falta instalar el/los que uses segun AI_PROVIDER en tu .env
+# (ver README "Cambiar de proveedor de IA") - no todos a la vez.
+anthropic>=0.60.0     # AI_PROVIDER=anthropic (default)
+# openai>=1.0.0       # AI_PROVIDER=openai
+# google-generativeai>=0.8.0   # AI_PROVIDER=gemini
+# requests>=2.31.0    # AI_PROVIDER=ollama (probablemente ya instalado como dependencia de otra libreria)

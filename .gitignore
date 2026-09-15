@@ -1,0 +1,23 @@
+# Secretos y credenciales: NUNCA subir esto
+.env
+.env.*
+!.env.example
+*service_account*.json
+*.pem
+*.key
+
+# Este proyecto esta pensado para publicarse: ninguna carpeta de una persona
+# real (categorias, nombre, etc.) va al repo, solo la plantilla generica en
+# people/_example/. Ver README para agregar gente nueva.
+/people/*
+!/people/_example/
+
+# Logs del bot (pueden contener descripciones/montos de gastos)
+logs/
+
+# Entorno virtual de Python
+venv/
+
+# Cache de Python
+__pycache__/
+*.pyc

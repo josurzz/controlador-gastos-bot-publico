@@ -1,0 +1,5 @@
+{
+  "categorias": ["Supermercado", "Transporte", "Entretenimiento", "Servicios", "Otros"],
+  "medios_pago": ["Efectivo", "Debito", "Credito"],
+  "aclaraciones_categorias": ""
+}

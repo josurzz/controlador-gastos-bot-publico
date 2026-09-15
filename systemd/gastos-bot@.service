@@ -1,0 +1,20 @@
+[Unit]
+Description=Bot de Telegram - Controlador de gastos por audio (%i)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+# Plantilla de instancia: %i es el nombre de la persona (la carpeta bajo
+# people/). Se activa por nombre, ej:
+#   sudo systemctl enable --now gastos-bot@josu.service
+#   sudo systemctl enable --now gastos-bot@eli.service
+# Reemplaza TU_USUARIO por tu usuario de Linux (lo ves corriendo "whoami")
+# y ajusta la ruta si el proyecto no esta en ~/controlador-gastos-bot.
+User=TU_USUARIO
+WorkingDirectory=/home/TU_USUARIO/controlador-gastos-bot/people/%i
+ExecStart=/home/TU_USUARIO/controlador-gastos-bot/venv/bin/python /home/TU_USUARIO/controlador-gastos-bot/main.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
